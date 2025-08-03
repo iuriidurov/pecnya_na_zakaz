@@ -217,41 +217,74 @@
 <section id="order" class="section">
   <div class="container">
     <div class="pill">Бриф</div>
-    <h2>Расскажите 5 фактов — остальное сделаем мы</h2>
+    <h2>Расскажите несколько фактов — все остальное сделаем мы</h2>
     <div class="card soft">
-      <form onsubmit="event.preventDefault(); alert('Спасибо! Мы свяжемся с вами для демо.');" data-evt="form_submit">
+      <form id="order-form" data-evt="form_submit">
         <div class="grid-2">
-          <div><label>Повод*</label>
-            <select required>
+          <div class="form-group">
+            <label for="reason">Повод</label>
+            <select id="reason" name="reason" required>
               <option value="">Выберите</option>
-              <option>Предложение</option>
-              <option>Юбилей мамы</option>
-              <option>Свадьба</option>
-              <option>Извинение</option>
-              <option>Дружба/прощание</option>
-              <option>Другое</option>
+              <option value="proposal">Предложение</option>
+              <option value="mom-anniversary">Юбилей мамы</option>
+              <option value="wedding">Свадьба</option>
+              <option value="apology">Извинение</option>
+              <option value="friendship">Дружба/прощание</option>
+              <option value="other">Другое</option>
             </select>
           </div>
-          <div><label>Для кого (имя, кто вам)*</label><input required type="text" placeholder="Например: мама Анна, моя мама"></div>
-          <div><label>Дата события*</label><input required type="date"></div>
-          <div><label>Контакты (Telegram/телефон/email)*</label><input required type="text" placeholder="@username / +7 / mail"></div>
+          <div class="form-group">
+            <label for="recipient">Для кого будет песня</label>
+            <input id="recipient" name="recipient" required type="text" placeholder="Например: мама, бабушка, жена, любимая/ый">
+          </div>
+          <div class="form-group">
+            <label for="use-name">Нужно ли в тексте упоминать имя?</label>
+            <select id="use-name" name="use-name">
+              <option value="yes">Да</option>
+              <option value="no">Нет</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="name">Имя человека (если нужно)</label>
+            <input id="name" name="name" type="text" placeholder="Например: Ольга, Сережа, Полечка и т.д.">
+          </div>
+          <div class="form-group">
+            <label for="mood">Настроение</label>
+            <input id="mood" name="mood" type="text" placeholder="Лирично/весело/кино/романтика/эмоционально">
+          </div>
+          <div class="form-group">
+            <label for="genre">Стиль/жанр</label>
+            <input id="genre" name="genre" type="text" placeholder="Рок, поп, шансон, романс, техно, инди">
+          </div>
         </div>
-        <div style="margin-top:12px">
-          <label>5–10 фактов/историй*</label>
-          <textarea required rows="6" placeholder="Места, шутки, имена, даты, детали..."></textarea>
+        <div class="form-group full-width">
+          <label for="use-own-text">Хотите, чтобы мы сами написали текст для песни?</label>
+          <select id="use-own-text" name="use-own-text">
+            <option value="yes">Да, напишите сами</option>
+            <option value="no">Нет, я предоставлю свой текст</option>
+          </select>
         </div>
-        <div class="grid-2" style="margin-top:12px">
-          <div><label>Жанр/настроение</label><input type="text" placeholder="Лирично/весело/кино и т.д."></div>
-          <div><label>Упоминать имена?</label><select><option>Да</option><option>Нет</option></select></div>
+        <div class="form-group full-width">
+          <label for="lyrics">Добавьте сюда свой текст (если есть)</label>
+          <textarea id="lyrics" name="lyrics" rows="6" placeholder="Ваш текст..."></textarea>
         </div>
-        <p style="color:var(--muted); margin-top:12px">Конфиденциальность 100%. Демо — до оплаты.</p>
-        <div class="cta">
-          <button class="btn btn-primary" type="submit">Отправить бриф и получить демо</button>
-          <a class="btn btn-primary" href="#demo">Послушать примеры</a>
+        <div class="form-group full-width">
+          <label for="facts">5–10 фактов/историй, которые нужно обязательно включить в песню</label>
+          <textarea id="facts" name="facts" required rows="6" placeholder="Места, шутки, имена, даты, детали..."></textarea>
+        </div>
+        <div class="form-group full-width">
+          <label for="contact">Ваши контакты (Telegram/WhatsApp)</label>
+          <input id="contact" name="contact" required type="text" placeholder="@username / +7 ">
+        </div>
+        <p class="form-note">Конфиденциальность 100%. Демо — до оплаты.</p>
+        <div class="cta form-actions">
+          <button class="btn btn-primary" type="submit">Отправить бриф </button>
+          
         </div>
       </form>
+	</div>
     </div>
-  </div>
+
 </section>
 
 <section class="section">
@@ -301,17 +334,17 @@
 
 <section class="section">
   <div class="container">
-    <h2>Подарите эмоции, о которых расскажут всем</h2>
-    <p>Заполните 5 фактов — и через 48–72 часа у вас будет своя песня за 1 990 ₽.</p>
+    <h2>Подарите вау-эмоции, которые точно запомнятся навсегда </h2>
+    <p>Расскажите несколько фактов — все остальное сделаем мы сами</p>
     <div class="cta">
       <a href="#order" class="btn btn-primary">Заказать за 1 990 ₽</a>
-      <a href="#demo" class="btn btn-primary">Получить демо 30 сек</a>
+      <a href="#demo" class="btn btn-primary">Слушать демо</a>
     </div>
   </div>
 </section>
 
 <footer class="footer">
-  <div class="container">© Персональная песня на заказ · {year} · Оплата онлайн • Договор/чек • Конфиденциальность</div>
+  <div class="container">© Персональная песня на заказ · 2025· </div>
 </footer>
 
 <div class="sticky-cta"><a href="#order" class="btn btn-primary" style="width:100%">Заказать за 1 990 ₽</a></div>
