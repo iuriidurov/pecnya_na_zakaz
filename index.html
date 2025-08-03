@@ -273,8 +273,27 @@
           <textarea id="facts" name="facts" required rows="6" placeholder="Места, шутки, имена, даты, детали..."></textarea>
         </div>
         <div class="form-group full-width">
-          <label for="contact">Ваши контакты (Telegram/WhatsApp)</label>
-          <input id="contact" name="contact" required type="text" placeholder="@username / +7 ">
+          <label>Как с вами связаться?</label>
+          <div class="contact-choice">
+            <label class="radio-label">
+              <input type="radio" name="contact-method" value="whatsapp" checked>
+              <span>WhatsApp</span>
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="contact-method" value="telegram">
+              <span>Telegram</span>
+            </label>
+          </div>
+        </div>
+
+        <div id="whatsapp-group" class="form-group full-width contact-field-group">
+          <label for="contact-phone">Номер WhatsApp</label>
+          <input id="contact-phone" name="contact-phone" required type="tel" placeholder="+7 (___) ___-__-__">
+        </div>
+
+        <div id="telegram-group" class="form-group full-width contact-field-group hidden">
+          <label for="contact-telegram">Имя пользователя Telegram</label>
+          <input id="contact-telegram" name="contact-telegram" type="text" placeholder="@username">
         </div>
         <p class="form-note">Конфиденциальность 100%. Демо — до оплаты.</p>
         <div class="cta form-actions">
@@ -349,6 +368,15 @@
 
 <div class="sticky-cta"><a href="#order" class="btn btn-primary" style="width:100%">Заказать за 1 990 ₽</a></div>
 
+<div id="success-modal" class="modal-overlay">
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+    <h3>Спасибо за вашу заявку!</h3>
+    <p>Мы свяжемся с вами в течение 30 минут и обсудим все важные детали.</p>
+  </div>
+</div>
+
+<script src="https://unpkg.com/imask"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
