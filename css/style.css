@@ -119,6 +119,106 @@
       color: var(--accent);
     }
 
+    .features .card {
+      background: var(--bg-soft);
+      padding: 24px;
+    }
+
+    .features .card h3 {
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 22px;
+      margin-bottom: 32px;
+      font-style: italic;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .final-pitch {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 40px;
+      padding: 20px 24px;
+      background: var(--grad);
+      color: #fff;
+      border-radius: 12px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .icon-verified {
+      display: inline-block;
+      margin-right: 8px;
+      color: #fff;
+      font-size: 20px;
+    }
+
+    .section.alt h2,
+    .section.alt .section-subtitle,
+    .section.alt p,
+    .section.alt .final-pitch,
+    .section.alt .cta {
+      text-align: left;
+    }
+
+    .section.alt .section-subtitle {
+      background: none;
+      -webkit-background-clip: initial;
+      background-clip: initial;
+      -webkit-text-fill-color: initial;
+      color: var(--text);
+      font-style: normal;
+    }
+
+    .intro-text {
+      position: relative;
+      background: var(--bg-soft);
+      padding: 24px 32px;
+      border-radius: 12px;
+      margin-bottom: 32px;
+      overflow: hidden;
+    }
+
+    .decorative-quote {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 120px;
+      font-family: Georgia, serif;
+      color: var(--accent);
+      opacity: 0.15;
+      line-height: 1;
+      z-index: 0;
+      user-select: none;
+    }
+
+    .signature {
+      text-align: right;
+      font-style: italic;
+      font-weight: 600;
+      margin-top: 16px;
+    }
+
+    .intro-text p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .intro-text p {
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 1em;
+    }
+
+    .intro-text p:last-child {
+      margin-bottom: 0;
+    }
+
     /* --- Responsive --- */
     @media (max-width: 1024px) {
       .row, .grid-2, .grid-3 {
