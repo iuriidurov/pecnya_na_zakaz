@@ -68,6 +68,34 @@
       font-size: 24px;
     }
 
+    .card-review {
+      position: relative;
+      padding-top: 35px;
+    }
+    .card-review::before {
+      content: '“';
+      position: absolute;
+      top: 10px;
+      left: 15px;
+      font-size: 80px;
+      font-weight: 800;
+      color: var(--bg-soft);
+      line-height: 1;
+    }
+    .card-review p {
+      position: relative;
+      z-index: 1;
+    }
+    .card-review cite {
+      position: relative;
+      z-index: 1;
+      display: block;
+      margin-top: 12px;
+      text-align: right;
+      font-style: italic;
+      color: var(--muted);
+    }
+
     /* --- Responsive --- */
     @media (max-width: 1024px) {
       .row, .grid-2, .grid-3 {
