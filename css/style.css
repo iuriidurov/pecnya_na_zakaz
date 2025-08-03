@@ -96,6 +96,29 @@
       color: var(--muted);
     }
 
+    .card.card-offer {
+      background: var(--grad);
+      color: #fff;
+      text-align: left;
+      box-shadow: var(--shadow-lg);
+      transform: scale(1.05);
+    }
+    .card-offer .price {
+      font-size: 64px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+    .card-offer p {
+      color: rgba(255,255,255,0.85);
+      max-width: 400px;
+      margin: 0 0 20px 0;
+    }
+    .card-offer .btn-primary {
+      background: #fff;
+      color: var(--accent);
+    }
+
     /* --- Responsive --- */
     @media (max-width: 1024px) {
       .row, .grid-2, .grid-3 {
