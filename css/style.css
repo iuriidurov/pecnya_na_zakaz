@@ -9,6 +9,7 @@
       --chip-bg:#ffffff; --chip-border:#ecd9d3;
     }
     *{box-sizing:border-box}
+.no-wrap{white-space:nowrap}
     body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,"Noto Sans"}
     a{text-decoration:none;color:inherit}
     .container{max-width:1120px;margin:0 auto;padding:0 20px}
@@ -17,7 +18,8 @@
     .topbar{position:sticky;top:0;z-index:50;backdrop-filter:saturate(120%) blur(8px);background:rgba(255,255,255,.7);border-bottom:1px solid var(--border)}
     .topbar-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
     .brand{display:flex;align-items:center;gap:12px;font-weight:800}
-    .logo{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:var(--grad);color:#fff;font-weight:900;box-shadow:var(--shadow);outline:1px solid rgba(0,0,0,.05)}
+@media (max-width:767px){.brand{display:none;}}
+    .logo{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;background:var(--grad);color:#fff;font-weight:900;box-shadow:var(--shadow);outline:1px solid rgba(0,0,0,.05)}
     .brand .title{font-size:18px;letter-spacing:.3px}
     .actions{display:flex;align-items:center;gap:12px}
     .messengers{display:flex;gap:12px}
@@ -50,6 +52,8 @@
     .row{display:grid;grid-template-columns:1.2fr 0.8fr;gap:28px}
     .card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:22px;box-shadow:var(--shadow)}
     .card.soft{background:var(--card-2)}
+    .card.soft ul{list-style:none;padding:0;margin-top:12px;margin-bottom:0}
+    .card.soft ul li{margin-bottom:8px}
     .badges-wrap{margin-top:16px;background:var(--grad-soft);border:1px solid var(--border);border-radius:18px;padding:10px;box-shadow:0 8px 24px rgba(255,184,107,.18);display:flex;flex-wrap:wrap;gap:10px}
     .chip{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;font-size:13px;font-weight:700;color:#374151;background:var(--chip-bg);border:1px solid var(--chip-border);border-radius:999px;box-shadow:0 4px 10px rgba(0,0,0,.05);transition:.2s transform,.2s box-shadow,.2s background}
     .chip svg{width:16px;height:16px}.chip:hover{transform:translateY(-1px);box-shadow:0 6px 14px rgba(0,0,0,.08)}
@@ -57,7 +61,7 @@
     .cta{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0 0}
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-    .pill{display:inline-block;padding:6px 16px;border-radius:999px;font-weight:800;font-size:13px;margin-bottom:16px;background:var(--grad);color:#fff;box-shadow:var(--shadow)}
+    .pill{display:inline-block;padding:8px 16px;border-radius:999px;font-weight:700;font-size:13px;background:var(--chip-bg);color:var(--text);border:1px solid var(--chip-border);box-shadow:0 4px 10px rgba(0,0,0,.05);}
     form{margin-top:22px}input,select,textarea{width:100%;padding:12px;border:1px solid var(--border);border-radius:12px;background:#fff;font:16px Inter,sans-serif}
     input:focus,select:focus,textarea:focus{outline:2px solid var(--accent-2)}
     .list{padding-left:18px;margin:0}.list li{margin:6px 0}
@@ -489,31 +493,58 @@
       h2 { font-size: 28px; }
       .section { padding: 48px 0; }
       .hero { padding: 60px 0 40px; }
+      .topbar-inner { padding: 12px 36px; }
     }
 
     @media (max-width: 767px) {
-      .topbar-inner .brand .title { display: none; }
-      .topbar-inner { padding: 10px 0; }
-      .actions .btn { display: none; }
-      .hero { text-align: center; }
-      h1 { font-size: 28px; }
-      h2 { font-size: 24px; text-align: center; }
-      .section { padding: 40px 0; }
-      .cta { justify-content: center; }
-      .sticky-cta { display: block; }
-      .footer { font-size: 12px; }
-      /* Показываем мессенджеры на мобильных устройствах */
-      .messengers { 
-        display: flex;
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 100;
+      .brand { display: none !important; }
+      .topbar { display: block !important; }
+      .topbar-inner { 
+        padding: 48px 0; 
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        text-align: center;
+      }
+      .actions { 
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+      .actions .btn { display: none !important; }
+      .messengers {
+        display: flex !important;
+        gap: 12px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
       }
       .icon-btn {
-        width: 52px;
-        height: 52px;
-        box-shadow: 0 6px 16px rgba(255,92,119,0.35);
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        box-shadow: none;
       }
+      .hero { text-align: center; padding-top: 80px; }
+      h1 { font-size: 26px; line-height: 1.3; }
+      h2 { font-size: 22px; text-align: center; }
+      .section { padding: 40px 0; }
+      .cta { justify-content: center; }
+      .sticky-cta { display: none; }
+      .footer { font-size: 12px; }
+            .badges-wrap { display: flex; justify-content: flex-start; flex-wrap: wrap; }
+      .pill { text-align: left; margin-left: 0; }
     }
 
+    .benefit-card {
+      background-color: #ffffff !important;
+    }
+
+    .section.alt .features .card {
+      background-color: #ffffff;
+    }
