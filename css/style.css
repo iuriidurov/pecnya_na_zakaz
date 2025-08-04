@@ -20,9 +20,24 @@
     .logo{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:var(--grad);color:#fff;font-weight:900;box-shadow:var(--shadow);outline:1px solid rgba(0,0,0,.05)}
     .brand .title{font-size:18px;letter-spacing:.3px}
     .actions{display:flex;align-items:center;gap:12px}
-    .messengers{display:flex;gap:10px}
-    .icon-btn{width:40px;height:40px;border-radius:12px;border:1px solid var(--border);display:grid;place-items:center;background:#fff}
-    .icon-btn img{width:22px;height:22px;display:block}
+    .messengers{display:flex;gap:12px}
+    .icon-btn{
+      width:48px;
+      height:48px;
+      border-radius:14px;
+      border:2px solid var(--accent);
+      display:grid;
+      place-items:center;
+      background:#fff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 12px rgba(255,92,119,0.2);
+      animation: pulse 2s infinite;
+    }
+    .icon-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 15px rgba(255,92,119,0.3);
+    }
+    .icon-btn img{width:28px;height:28px;display:block}
     .btn{appearance:none;border:0;border-radius:14px;padding:14px 18px;font-weight:800;cursor:pointer;text-align:center;letter-spacing:.2px}
     .btn-primary{background:var(--grad);color:#fff;box-shadow:var(--shadow)}
     .btn-primary:hover{filter:saturate(110%) brightness(1.02)}
@@ -370,6 +385,18 @@
       .cta { justify-content: center; }
       .sticky-cta { display: block; }
       .footer { font-size: 12px; }
-      .messengers { display: none; } /* Hide messengers on smallest screens to prevent overflow */
+      /* Показываем мессенджеры на мобильных устройствах */
+      .messengers { 
+        display: flex;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 100;
+      }
+      .icon-btn {
+        width: 52px;
+        height: 52px;
+        box-shadow: 0 6px 16px rgba(255,92,119,0.35);
+      }
     }
 

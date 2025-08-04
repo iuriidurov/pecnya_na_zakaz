@@ -1,0 +1,53 @@
+/* Стили для кнопок мессенджеров */
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 4px 12px rgba(255,92,119,0.2); }
+  50% { transform: scale(1.05); box-shadow: 0 8px 20px rgba(255,92,119,0.4); }
+  100% { transform: scale(1); box-shadow: 0 4px 12px rgba(255,92,119,0.2); }
+}
+
+.messengers {
+  display: flex;
+  gap: 12px;
+}
+
+.icon-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  border: 2px solid var(--accent);
+  display: grid;
+  place-items: center;
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255,92,119,0.2);
+  animation: pulse 2s infinite;
+}
+
+.icon-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(255,92,119,0.3);
+  animation: none;
+}
+
+.icon-btn img {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+/* Стили для мобильной версии */
+@media (max-width: 767px) {
+  .messengers { 
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+  }
+  
+  .icon-btn {
+    width: 52px;
+    height: 52px;
+    box-shadow: 0 6px 16px rgba(255,92,119,0.35);
+  }
+}
