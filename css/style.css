@@ -363,6 +363,24 @@
       padding: 0;
     }
 
+    .policy-check {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .policy-check input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+
+    .policy-check label {
+      margin-bottom: 0;
+      font-weight: 500;
+    }
+
     /* --- Responsive --- */
     @media (max-width: 1024px) {
       .row, .grid-2, .grid-3 {

@@ -296,15 +296,17 @@
           <label for="contact-telegram">Имя пользователя Telegram</label>
           <input id="contact-telegram" name="contact-telegram" type="text" placeholder="@username">
         </div>
-        <p class="form-note">Конфиденциальность 100%. Демо — до оплаты.</p>
+        <div class="form-group full-width policy-check">
+          <input type="checkbox" id="policy-agree" name="policy-agree" required>
+          <label for="policy-agree">Я согласен с <a href="policy.html" target="_blank">политикой в отношении обработки персональных данных</a></label>
+        </div>
         <div class="cta form-actions">
-          <button class="btn btn-primary" type="submit">Отправить бриф </button>
+          <button class="btn btn-primary" type="submit" disabled>Отправить бриф </button>
           
         </div>
       </form>
 	</div>
     </div>
-
 </section>
 
 <section class="section">
@@ -325,14 +327,9 @@
 <section class="section alt">
   <div class="container">
     <div class="pill">О нас</div>
-    <h2>Почему доверяют нам</h2>
-    <p class="section-subtitle"><strong>Вдохновляем, удивляем, превращаем ваши истории в песню!</strong></p>
-    <div class="intro-text">
-      <span class="decorative-quote">“</span>
-      <p>Песни, созданные нашей командой, удивляли любимых на днях рождения, звучали впервые на свадьбах и вдохновляли в самые важные моменты.</p>
-      <p><strong>Мы уверены: ваша история достойна быть услышанной и запомниться навсегда.</strong></p>
-      <p class="signature">— Ваша команда</p>
-    </div>
+    <h2>Почему нам доверяют</h2>
+    <p class="section-subtitle"><strong>Вдохновляем, удивляем, превращаем ваши истории в оригинальные песни!</strong></p>
+    
     <div class="grid-3 features">
       <div class="card">
         <h3>Живой и искренний подход</h3>

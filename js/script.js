@@ -21,6 +21,13 @@
   // Handle form submission
   const orderForm = document.getElementById('order-form');
   if (orderForm) {
+    const policyCheckbox = document.getElementById('policy-agree');
+    const submitButton = orderForm.querySelector('button[type="submit"]');
+
+    policyCheckbox.addEventListener('change', function() {
+      submitButton.disabled = !this.checked;
+    });
+
     orderForm.addEventListener('submit', async function(event) {
       event.preventDefault();
 
@@ -76,10 +83,10 @@
         console.error(error);
         alert('Произошла ошибка при отправке. Пожалуйста, попробуйте еще раз.');
       } finally {
-        submitButton.disabled = false;
         submitButton.innerHTML = originalButtonText;
         showModal();
         orderForm.reset();
+        submitButton.disabled = true; // Disable after form reset
       }
     });
   }
