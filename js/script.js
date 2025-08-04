@@ -22,14 +22,34 @@
   const orderForm = document.getElementById('order-form');
   if (orderForm) {
     const policyCheckbox = document.getElementById('policy-agree');
-    const submitButton = orderForm.querySelector('button[type="submit"]');
+    const policyGroup = document.querySelector('.policy-check');
 
-    policyCheckbox.addEventListener('change', function() {
-      submitButton.disabled = !this.checked;
-    });
+    const submitButton = orderForm.querySelector('button[type="submit"]');
+    // initial state
+    if (policyCheckbox && submitButton) {
+      submitButton.disabled = !policyCheckbox.checked;
+    }
+
+    // Toggle submit availability + remove error highlight
+    if (policyCheckbox) {
+      policyCheckbox.addEventListener('change', function () {
+        if (submitButton) submitButton.disabled = !this.checked;
+        if (this.checked) {
+          policyGroup.classList.remove('error');
+        }
+      });
+    }
+
 
     orderForm.addEventListener('submit', async function(event) {
       event.preventDefault();
+
+      // validate policy agreement
+      if (policyCheckbox && !policyCheckbox.checked) {
+        policyGroup.classList.add('error');
+        policyCheckbox.focus();
+        return;
+      }
 
       const submitButton = orderForm.querySelector('button[type="submit"]');
       const originalButtonText = submitButton.innerHTML;
@@ -43,8 +63,15 @@
       const formData = new FormData(orderForm);
       const data = Object.fromEntries(formData.entries());
 
+      // Map reason value to Russian label
+      let reasonText = data.reason || 'Не указан';
+      const reasonSelect = orderForm.querySelector('#reason');
+      if (reasonSelect) {
+        reasonText = reasonSelect.options[reasonSelect.selectedIndex].textContent;
+      }
+
       let message = `<b>🔥 Новый заказ на песню!</b>\n\n`;
-      message += `<b>Повод:</b> ${data.reason || 'Не указан'}\n`;
+      message += `<b>Повод:</b> ${reasonText}\n`;
       message += `<b>Для кого:</b> ${data.recipient || 'Не указан'}\n`;
       message += `<b>Упомянуть имя:</b> ${data['use-name'] === 'yes' ? 'Да' : 'Нет'}\n`;
       if (data.name) message += `<b>Имя:</b> ${data.name}\n`;
@@ -86,8 +113,20 @@
         submitButton.innerHTML = originalButtonText;
         showModal();
         orderForm.reset();
-        submitButton.disabled = true; // Disable after form reset
+
       }
+    });
+  }
+
+  // Scroll-to-top button
+  const scrollBtn = document.getElementById('scrollTop');
+  if (scrollBtn) {
+    window.addEventListener('scroll', () => {
+      const show = window.scrollY > 400;
+      scrollBtn.classList.toggle('visible', show);
+    });
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 
