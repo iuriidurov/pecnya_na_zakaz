@@ -11,16 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $token = getenv('TELEGRAM_API_TOKEN');
 $chat_id = getenv('TELEGRAM_CHAT_ID');
 
-// Если переменные окружения не заданы, можно временно использовать заглушки,
-// но на хостинге их нужно будет настроить!
-if (!$token) {
-    // ЗАМЕНИТЬ ПЕРЕД ЗАГРУЗКОЙ НА ХОСТИНГ
-    $token = '8004634051:AAEMd4Pz-4y3pcoP67Nsaa6LoY4Xkbqwgrw'; 
-}
-if (!$chat_id) {
-    // ЗАМЕНИТЬ ПЕРЕД ЗАГРУЗКОЙ НА ХОСТИНГ
-    $chat_id = '-1002581153952';
-}
+
 
 // Получаем тело запроса (JSON от клиента)
 $json_data = file_get_contents('php://input');
