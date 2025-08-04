@@ -56,9 +56,7 @@
       submitButton.disabled = true;
       submitButton.innerHTML = 'Отправка...';
 
-      const TOKEN = "8004634051:AAEMd4Pz-4y3pcoP67Nsaa6LoY4Xkbqwgrw";
-      const CHAT_ID = "-1002581153952";
-      const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+      const URL_API = 'api/send-telegram.php'; // Путь к нашему PHP-обработчику
 
       const formData = new FormData(orderForm);
       const data = Object.fromEntries(formData.entries());
@@ -95,15 +93,12 @@
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify({
-            chat_id: CHAT_ID,
-            parse_mode: 'html',
-            text: message
-          })
+          body: JSON.stringify({ message: message }) // Отправляем объект с ключом 'message'
         });
 
         if (!response.ok) {
-          throw new Error('Ошибка при отправке в Telegram');
+          const errorData = await response.json();
+          throw new Error(errorData.message || 'Ошибка при отправке в Telegram');
         }
 
       } catch (error) {
