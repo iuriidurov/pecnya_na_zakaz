@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /api/
+Allow: /
+
+# Укажите полный путь к вашей карте сайта
+# Sitemap: https://ваш-домен.рф/sitemap.xml
