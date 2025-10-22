@@ -548,3 +548,200 @@
     .section.alt .features .card {
       background-color: #ffffff;
     }
+
+    /* Hero Image Styles */
+    .hero-image-wrapper {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      border: 3px solid #fff;
+      outline: 1px solid var(--border);
+    }
+
+    .hero-card {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Use Case Card Icons */
+    .use-case-card {
+      text-align: center;
+      position: relative;
+      padding-top: 60px;
+    }
+
+    .use-case-icon {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 42px;
+      line-height: 1;
+    }
+
+    /* Review Stars */
+    .stars {
+      font-size: 16px;
+      margin-bottom: 12px;
+      line-height: 1;
+    }
+
+    /* Additional improvements */
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 1024px) {
+      .hero-image {
+        height: 220px;
+      }
+      
+      .use-case-icon {
+        font-size: 36px;
+        top: 18px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .hero-image {
+        height: 180px;
+      }
+      
+      .use-case-card {
+        padding-top: 50px;
+      }
+      
+      .use-case-icon {
+        font-size: 32px;
+        top: 15px;
+      }
+    }
+
+    /* Section Images */
+    .section-with-image .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .content-column {
+      z-index: 1;
+    }
+
+    .image-column {
+      position: relative;
+    }
+
+    .section-image {
+      width: 100%;
+      height: auto;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      object-fit: cover;
+      max-height: 400px;
+    }
+
+    .section-image-center {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .collage-image {
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .team-image {
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      margin-bottom: 30px;
+    }
+
+    /* Offer with image */
+    .offer-with-image {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .offer-image-wrapper {
+      position: relative;
+    }
+
+    .offer-image {
+      width: 100%;
+      height: auto;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      object-fit: cover;
+      max-height: 350px;
+    }
+
+    /* Background section */
+    .section-with-background {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section-with-background::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 248, 245, 0.85);
+      z-index: 0;
+    }
+
+    .section-with-background .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+      .section-with-image .row,
+      .offer-with-image {
+        grid-template-columns: 1fr;
+      }
+
+      .section-image,
+      .collage-image,
+      .team-image,
+      .offer-image {
+        max-height: 300px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .section-image,
+      .collage-image,
+      .team-image,
+      .offer-image {
+        max-height: 250px;
+        border-radius: 12px;
+      }
+
+      .section-image-center {
+        margin: 20px 0;
+      }
+    }

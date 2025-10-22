@@ -1,0 +1,13 @@
+# Защита конфигурационного файла от прямого доступа
+<Files "config.php">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Разрешаем доступ только к send-telegram.php
+<FilesMatch "^(send-telegram\.php)$">
+    Order allow,deny
+    Allow from all
+</FilesMatch>
+
+

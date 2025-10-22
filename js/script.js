@@ -101,14 +101,21 @@
           throw new Error(errorData.message || 'Ошибка при отправке в Telegram');
         }
 
+        // Отправка события в Яндекс.Метрику при успешной отправке заявки
+        if (typeof ym !== 'undefined') {
+          ym(104739398, 'reachGoal', 'lead');
+        }
+
       } catch (error) {
         console.error(error);
         alert('Произошла ошибка при отправке. Пожалуйста, попробуйте еще раз.');
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonText;
       } finally {
+        submitButton.disabled = false;
         submitButton.innerHTML = originalButtonText;
         showModal();
         orderForm.reset();
-
       }
     });
   }

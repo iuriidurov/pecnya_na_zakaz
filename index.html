@@ -7,8 +7,30 @@
   </title>
   <meta content="width=device-width,initial-scale=1" name="viewport"/>
   <meta content="Персональная песня на заказ за 1 990 ₽. Готово за 48–72 часа. 3 правки включены. MP3/WAV + обложка." name="description"/>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <link rel="alternate icon" href="favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+  
+  <link rel="preload" href="css/style.css" as="style"/>
+  <link rel="preload" href="js/imask.min.js" as="script"/>
   <link href="css/style.css" rel="stylesheet"/>
   <link href="css/messengers.css" rel="stylesheet"/>
+  
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=104739398', 'ym');
+
+    ym(104739398, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/104739398" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
  </head>
  <body>
   <div class="topbar">
@@ -29,7 +51,7 @@
       <a class="icon-btn" href="https://t.me/Iurii_Durov" rel="noopener" target="_blank" title="Telegram">
        <img alt="Telegram" src="img/telegram_2.png"/>
       </a>
-      <a class="icon-btn" href="https://vk.com/yurydurov" rel="noopener" target="_blank" title="VK">
+      <a class="icon-btn" href="https://vk.com/pesnya.v.podarok" rel="noopener" target="_blank" title="VK">
        <img alt="VK" src="img/vk_3.png"/>
       </a>
      </div>
@@ -42,7 +64,7 @@
   <header class="hero">
    <div class="container">
     <div class="row">
-     <div>
+     <div class="hero-content">
       <h1>
        Персональная песня на заказ за
        <span class="no-wrap">
@@ -80,8 +102,9 @@
        </a>
       </div>
      </div>
-     <div>
-      <div class="card soft">
+     <div class="hero-image-wrapper">
+      <img src="img/A_warm_and_touching_scene_happy_diverse_people_c-1760983434705.png" alt="Персональная песня на заказ - создайте эмоциональный подарок" class="hero-image"/>
+      <div class="card soft hero-card">
        <h3>
         Что вы получите
        </h3>
@@ -110,18 +133,25 @@
     </div>
    </div>
   </header>
-  <section class="section alt">
+  <section class="section alt section-with-image">
    <div class="container">
-    <h2>
-     Почему это точно оценят?
-    </h2>
-    <p>
-     Обычные подарки забываются, но персональная песня — это то, что останется в душе и памяти важного для вас человека  навсегда.
-     <br/>
-     Вы дарите эмоции, внимание и память, записанные в музыку. Это уникально и ценно.
-     <br/>
-     Мы возьмем вашу личную историю и превратим ее в строки и мелодию, от которых пойдут мурашки даже у самых стойких.
-    </p>
+    <div class="row">
+     <div class="content-column">
+      <h2>
+       Почему это точно оценят?
+      </h2>
+      <p>
+       Обычные подарки забываются, но персональная песня — это то, что останется в душе и памяти важного для вас человека  навсегда.
+       <br/>
+       Вы дарите эмоции, внимание и память, записанные в музыку. Это уникально и ценно.
+       <br/>
+       Мы возьмем вашу личную историю и превратим ее в строки и мелодию, от которых пойдут мурашки даже у самых стойких.
+      </p>
+     </div>
+     <div class="image-column">
+      <img src="img/Close-up_lifestyle_photo_beautifully_wrapped_gift-1760984417945.png" alt="Красивый подарок - персональная песня" class="section-image"/>
+     </div>
+    </div>
     <h3>
      Что вы получаете:
     </h3>
@@ -161,8 +191,12 @@
     <h2>
      Под любой важный момент жизни
     </h2>
+    <div class="section-image-center">
+     <img src="img/A_collage_of_six_photographs_illustrating_various_-1760983829256.png" alt="Различные случаи для персональной песни" class="collage-image"/>
+    </div>
     <div class="grid-3">
-     <div class="card">
+     <div class="card use-case-card">
+      <div class="use-case-icon">💍</div>
       <h3>
        Предложение через песню
       </h3>
@@ -175,7 +209,8 @@
        </a>
       </div>
      </div>
-     <div class="card">
+     <div class="card use-case-card">
+      <div class="use-case-icon">❤️</div>
       <h3>
        Юбилей мамы
       </h3>
@@ -188,7 +223,8 @@
        </a>
       </div>
      </div>
-     <div class="card">
+     <div class="card use-case-card">
+      <div class="use-case-icon">🎉</div>
       <h3>
        Свадебный подарок друзьям
       </h3>
@@ -201,7 +237,8 @@
        </a>
       </div>
      </div>
-     <div class="card">
+     <div class="card use-case-card">
+      <div class="use-case-icon">🤝</div>
       <h3>
        Песня-дружба/прощание
       </h3>
@@ -214,7 +251,8 @@
        </a>
       </div>
      </div>
-     <div class="card">
+     <div class="card use-case-card">
+      <div class="use-case-icon">🙏</div>
       <h3>
        Музыкальное извинение
       </h3>
@@ -227,7 +265,8 @@
        </a>
       </div>
      </div>
-     <div class="card">
+     <div class="card use-case-card">
+      <div class="use-case-icon">💕</div>
       <h3>
        Песня для мужа/жены на годовщину
       </h3>
@@ -243,7 +282,7 @@
     </div>
    </div>
   </section>
-  <section class="section alt">
+  <section class="section alt section-with-background" style="background-image: url('img/Abstract_celebration_background_floating_musical_-1760984317640.png'); background-size: cover; background-position: center; background-blend-mode: soft-light;">
    <div class="container">
     <div class="pill">
      Создание песни
@@ -257,7 +296,7 @@
        Сообщите нам все пожелания к песне - через форму на сайте, в Телеграме/Вотсапе, как вам удобнее. Можно даже голосовыми.
       </h3>
       <p>
-       Кому, повод, 5–10 фактов для песни, стиль/жанр/пример/возможно, свой текст - все, что считаете важным
+       Кому, повод, 5–10 фактов для песни, стиль/жанр/пример/возможно, свой текст - все, что считаете важным.
       </p>
      </div>
      <div class="card soft">
@@ -303,7 +342,7 @@
     <div class="grid-3">
      <div class="card">
       <h3>
-       ДЛЯ МАМЫ
+       ДЛЯ МАМЫ (НА ЮБИЛЕЙ)
       </h3>
       <audio controls="" preload="none">
        <source src="audio/ДЛЯ МАМЫ.mp3" type="audio/mpeg"/>
@@ -311,23 +350,7 @@
      </div>
      <div class="card">
       <h3>
-       MELANCHOLIC DRIVE
-      </h3>
-      <audio controls="" preload="none">
-       <source src="audio/MELANCHOLIC DRIVE.mp3" type="audio/mpeg"/>
-      </audio>
-     </div>
-     <div class="card">
-      <h3>
-       SHADOWS IN THE LIGHT
-      </h3>
-      <audio controls="" preload="none">
-       <source src="audio/SHADOWS IN THE LIGHT.mp3" type="audio/mpeg"/>
-      </audio>
-     </div>
-     <div class="card">
-      <h3>
-       БЕЗ ТЕБЯ
+       БЕЗ ТЕБЯ (ПЕСНЯ-ИЗВИНЕНИЕ)
       </h3>
       <audio controls="" preload="none">
        <source src="audio/БЕЗ ТЕБЯ.mp3" type="audio/mpeg"/>
@@ -335,7 +358,15 @@
      </div>
      <div class="card">
       <h3>
-       ЗА ТУМАНОМ
+       КОЛДОВСТВО (ДЛЯ ЖЕНЫ НА ГОДОВЩИНУ СВАДЬБЫ)
+      </h3>
+      <audio controls="" preload="none">
+       <source src="audio/КОЛДОВСТВО.mp3" type="audio/mpeg"/>
+      </audio>
+     </div>
+     <div class="card">
+      <h3>
+       ЗА ТУМАНОМ (ДЛЯ ДРУГА)
       </h3>
       <audio controls="" preload="none">
        <source src="audio/ЗА ТУМАНОМ.wav" type="audio/wav"/>
@@ -343,10 +374,42 @@
      </div>
      <div class="card">
       <h3>
-       КОЛДОВСТВО
+       А РЕКА ТЕЧЁТ (ДЛЯ ПАПЫ)
       </h3>
       <audio controls="" preload="none">
-       <source src="audio/КОЛДОВСТВО.mp3" type="audio/mpeg"/>
+       <source src="audio/А РЕКА ТЕЧЁТ.mp3" type="audio/mpeg"/>
+      </audio>
+     </div>
+     <div class="card">
+      <h3>
+       БЕРЕГИНЯ СВЕТА (ДЛЯ ПОДРУГИ НА ДЕНЬ РОЖДЕНИЯ)
+      </h3>
+      <audio controls="" preload="none">
+       <source src="audio/БЕРЕГИНЯ СВЕТА.mp3" type="audio/mpeg"/>
+      </audio>
+     </div>
+     <div class="card">
+      <h3>
+       ДЛЯ РЕБЁНКА-ШКОЛЬНИКА
+      </h3>
+      <audio controls="" preload="none">
+       <source src="audio/ДЛЯ РЕБЁНКА-ШКОЛЬНИКА.mp3" type="audio/mpeg"/>
+      </audio>
+     </div>
+     <div class="card">
+      <h3>
+       МЫШЕЛОВКА (COVER PIKNIK)
+      </h3>
+      <audio controls="" preload="none">
+       <source src="audio/МЫШЕЛОВКА (COVER PIKNIK).mp3" type="audio/mpeg"/>
+      </audio>
+     </div>
+     <div class="card">
+      <h3>
+       ЗАМКНУТЫЙ КРУГ (ПРИЗНАНИЕ В ЛЮБВИ)
+      </h3>
+      <audio controls="" preload="none">
+       <source src="audio/ЗАМКНУТЫЙ КРУГ.mp3" type="audio/mpeg"/>
       </audio>
      </div>
     </div>
@@ -362,6 +425,7 @@
     </h2>
     <div class="grid-3">
      <div class="card card-review">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
       <p>
        «Заказала песню маме на 60 лет, все слова про неё, до слёз! Получили за день до праздника, все гости были в восторге.»
       </p>
@@ -370,6 +434,7 @@
       </cite>
      </div>
      <div class="card card-review">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
       <p>
        «Хотел удивить невесту – песня прозвучала при первом танце, она расплакалась! Очень понравился подход, все быстро и профессионально.»
       </p>
@@ -378,6 +443,7 @@
       </cite>
      </div>
      <div class="card card-review">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
       <p>
        «Сделали песню для лучшей подруги за два дня, вписали мельчайшие детали! Песня стала хитом вечеринки, подруга до сих пор переслушивает.»
       </p>
@@ -386,6 +452,7 @@
       </cite>
      </div>
      <div class="card card-review">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
       <p>
        «Наш коллектив заказал песню для директора. Уже на первой минуте было ощущение, что песню писал близкий друг, настолько точные строчки! Всем очень понравилось!»
       </p>
@@ -394,6 +461,7 @@
       </cite>
      </div>
      <div class="card card-review">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
       <p>
        «Спасибо за настоящие эмоции! Песня вышла личной и трогательной, жена сказала, что это лучший подарок за 10 лет.»
       </p>
@@ -402,6 +470,7 @@
       </cite>
      </div>
      <div class="card card-review">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
       <p>
        «Хотели подарок классному руководителю – получилась настоящая поэма жизни! Очень благодарны, песня стала главным событием выпускного.»
       </p>
@@ -410,6 +479,7 @@
       </cite>
      </div>
      <div class="card card-review">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
       <p>
        «Не знала, что подарить родителям на Новый год, и идея с песней — просто спасение! Отреагировали очень трогательно, теперь это наш семейный гимн.»
       </p>
@@ -418,6 +488,7 @@
       </cite>
      </div>
      <div class="card card-review">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
       <p>
        «Заказал песню для предложения, включил её на свидании. Девушка сказала «да», расплакалась от счастья! Оперативно, профессионально, незабываемо!»
       </p>
@@ -426,6 +497,7 @@
       </cite>
      </div>
      <div class="card card-review">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
       <p>
        «В песне так сложили слова и факты, будто знали всю нашу семью. Дед плакал, слушая себя в песне! Очень качественная работа.»
       </p>
@@ -434,6 +506,7 @@
       </cite>
      </div>
      <div class="card card-review">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
       <p>
        «Порадовал супругу песней – результат превзошёл ожидания! Профессионально, душевно, главное — оперативно.»
       </p>
@@ -442,6 +515,7 @@
       </cite>
      </div>
      <div class="card card-review">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
       <p>
        «Заказала песню для мужа и новорождённого сына, вложили всю нашу семейную историю. Получилось очень нежно и искренне!»
       </p>
@@ -450,6 +524,7 @@
       </cite>
      </div>
      <div class="card card-review">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
       <p>
        «Друзья были в шоке – весело, динамично, все про именинника! Песня вызвала море смеха и слёз. Спасибо за оперативность!»
       </p>
@@ -458,6 +533,7 @@
       </cite>
      </div>
      <div class="card card-review">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
       <p>
        «Огромное спасибо за песню для выпуска – все 25 выпускников были упомянуты! Плакали даже преподаватели.»
       </p>
@@ -466,6 +542,7 @@
       </cite>
      </div>
      <div class="card card-review">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
       <p>
        «Удивил девушку песней про нашу историю – она сопереживала каждому куплету. Всё вовремя, очень личный текст, рекомендую!»
       </p>
@@ -474,6 +551,7 @@
       </cite>
      </div>
      <div class="card card-review">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
       <p>
        «Мама до сих пор плачет от счастья, слушая свою песню! Всё четко по срокам, очень тёплые слова, спасибо команде.»
       </p>
@@ -482,6 +560,7 @@
       </cite>
      </div>
      <div class="card card-review">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
       <p>
        «Песня получилась с юмором и душой, коллеги долго обсуждали подарок! Не ожидал такого эффекта, за сутки подготовили шикарный сюрприз.»
       </p>
@@ -490,6 +569,7 @@
       </cite>
      </div>
      <div class="card card-review">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
       <p>
        «Не знала, чем порадовать парня на 14 февраля. Песня под описанную мной историю отношений, получилось очень романтично!»
       </p>
@@ -498,6 +578,7 @@
       </cite>
      </div>
      <div class="card card-review">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
       <p>
        «Текст написали как будто для нас, бабушка теперь напевает свой куплет. Недорого, и главное — с теплом!»
       </p>
@@ -506,6 +587,7 @@
       </cite>
      </div>
      <div class="card card-review">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
       <p>
        «Решили подарить песню на девичник, всё организовали за 48 часов, были упомянуты все забавные истории, отзывы исключительно позитивные!»
       </p>
@@ -514,6 +596,7 @@
       </cite>
      </div>
      <div class="card card-review">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
       <p>
        «Заказал шутливую песню другу к разводу – подняли настроение всей компании, парень забыл о грусти! Всё очень быстро и с юмором!»
       </p>
@@ -537,7 +620,11 @@
     <h2>
      Одна цена. Всё включено. Оплата только после WOW-ощущения
     </h2>
-    <div class="card soft card-offer">
+    <div class="offer-with-image">
+     <div class="offer-image-wrapper">
+      <img src="img/A_close-up_photo_of_a_beautifully_wrapped_gift_box-1760984512098.png" alt="Подарочная упаковка" class="offer-image"/>
+     </div>
+     <div class="card soft card-offer">
      <div class="price">
       1 990 ₽
      </div>
@@ -557,6 +644,7 @@
        Заказать песню
       </a>
      </div>
+    </div>
     </div>
    </div>
   </section>
@@ -603,7 +691,7 @@
         <label for="recipient">
          Для кого будет песня
         </label>
-        <input id="recipient" name="recipient" placeholder="Например: мама, бабушка, жена, любимая/ый" required="" type="text"/>
+        <input id="recipient" name="recipient" placeholder="Например: мама, бабушка, жена, любимая/ый, ..." required="" type="text"/>
        </div>
        <div class="form-group">
         <label for="use-name">
@@ -622,19 +710,19 @@
         <label for="name">
          Имя человека (если нужно)
         </label>
-        <input id="name" name="name" placeholder="Например: Ольга, Сережа, Полечка и т.д." type="text"/>
+        <input id="name" name="name" placeholder="Например: Ольга, Сережа, Полечка, ..." type="text"/>
        </div>
        <div class="form-group">
         <label for="mood">
          Настроение
         </label>
-        <input id="mood" name="mood" placeholder="Лирично/весело/кино/романтика/эмоционально" type="text"/>
+        <input id="mood" name="mood" placeholder="Лирично/весело/кино/романтика/эмоционально/..." type="text"/>
        </div>
        <div class="form-group">
         <label for="genre">
          Жанр/в стиле какого певца
         </label>
-        <input id="genre" name="genre" placeholder="Рок, поп, шансон, романс, техно, инди" type="text"/>
+        <input id="genre" name="genre" placeholder="Рок, поп, шансон, романс, техно, инди, ..." type="text"/>
        </div>
       </div>
       <div class="form-group full-width">
@@ -660,7 +748,7 @@
        <label for="facts">
         5–10 фактов/историй, которые нужно обязательно включить в песню
        </label>
-       <textarea id="facts" name="facts" placeholder="Места, шутки, имена, даты, детали..." required="" rows="6"></textarea>
+       <textarea id="facts" name="facts" placeholder="Места, шутки, имена, даты, детали, ..." required="" rows="6"></textarea>
       </div>
       <div class="form-group full-width">
        <label>
@@ -725,7 +813,7 @@
        Сколько длится песня?
       </h3>
       <p>
-       Обычно 2–3 минуты (куплеты + припев).
+       Обычно 2–3 минуты (куплеты + припев). Можно дольше или короче по вашему желанию.
       </p>
      </div>
      <div class="card soft">
@@ -779,6 +867,9 @@
     <h2>
      Почему нам доверяют
     </h2>
+    <div class="section-image-center">
+     <img src="img/Professional_lifestyle_photography_a_group_of_hap-1760983536827.png" alt="Счастливые клиенты с персональными песнями" class="team-image"/>
+    </div>
     <p class="section-subtitle">
      <strong>
       Вдохновляем, удивляем, превращаем ваши истории в оригинальные песни!
@@ -866,12 +957,10 @@
     </p>
    </div>
   </div>
-  <script src="https://unpkg.com/imask">
-  </script>
   <button aria-label="Наверх" class="scroll-top" id="scrollTop">
    ↑
   </button>
-  <script src="js/script.js">
-  </script>
+  <script src="js/imask.min.js"></script>
+  <script src="js/script.js"></script>
  </body>
 </html>

@@ -5,11 +5,16 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit('Метод не разрешен');
 }
 
-// Получаем секретные переменные. На хостинге Beget их нужно будет задать в панели управления
-// в разделе "Переменные окружения" или определить прямо здесь, если нет такой возможности.
-// Важно: не храните токен в открытом виде в системе контроля версий (Git).
-$token = getenv('TELEGRAM_API_TOKEN');
-$chat_id = getenv('TELEGRAM_CHAT_ID');
+// Загружаем конфигурацию из защищенного файла
+$config = require __DIR__ . '/config.php';
+
+if (!isset($config['telegram_token']) || !isset($config['telegram_chat_id'])) {
+    header('HTTP/1.1 500 Internal Server Error');
+    exit('Ошибка конфигурации сервера');
+}
+
+$token = $config['telegram_token'];
+$chat_id = $config['telegram_chat_id'];
 
 
 
